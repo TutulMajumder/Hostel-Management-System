@@ -1,81 +1,8 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh; 
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-header {
-    background-color: white;
-    padding: 10px 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-}
-
-header .logo {
-    font-size: 36px; 
-    font-weight: bold; 
-    color: #003366; 
-    padding-left: 20px;
-    letter-spacing: 2px; 
-    text-transform: uppercase; 
-    font-family: 'Arial', sans-serif; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
-}
-
-header .header-actions {
-    display: flex;
-    align-items: center;
-}
-
-header .welcome-text {
-    font-size: 18px;
-    color: #333;
-    margin-right: 20px; /* Space between text and icons */
-}
-header .view-profile,
-header .logout {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    margin-right: 20px; 
-}
-
-
-
-header .view-profile img,
-header .logout img {
-    margin-right: 5px;
-    width: 64px; 
-    height: 64px; 
-}
-
-main {
-    width: 100%; /* Take up full width */
-    padding: 20px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1; /* Ensures main takes the remaining space */
-    overflow-y: auto; /* Allow vertical scrolling only */
-}
 
 .card-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px; /* Margin between rows */
+    margin-bottom: 20px; 
     width: 100%;
     flex-wrap: wrap; 
     gap: 20px; 
@@ -87,16 +14,16 @@ main {
     padding: 30px;
     border-radius: 12px;
     text-align: center;
-    width: calc(33.33% - 20px); /* Adjusted to fit 3 cards per row with gap */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stylish card shadow */
-    min-height: 200px; /* Ensured the cards are bigger */
-    box-sizing: border-box; /* Include padding in width */
-    cursor: pointer; /* Make it look clickable like a button */
+    width: calc(33.33% - 20px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    min-height: 200px; 
+    box-sizing: border-box; 
+    cursor: pointer; 
 }
 
 .card:hover {
-    background-color: #005f87; /* Change background color on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Hover effect: stronger shadow */
+    background-color: #005f87; 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); 
 }
 
 .card h3 a {
@@ -114,13 +41,4 @@ main {
     line-height: 1.5;
 }
 
-footer {
-    background-color: white;
-    text-align: center;
-    padding: 5px 10px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    font-size: 12px; 
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); 
-}
+
