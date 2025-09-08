@@ -1,0 +1,102 @@
+/* General Layout for Leave Requests Table */
+#leave-requests {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* Container for the table */
+.table-container {
+    max-height: 400px;  
+    overflow-y: auto;   
+    border: 1px solid #ddd;
+}
+
+/* Table Styles */
+.requests-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Table Header Styling */
+.requests-table th {
+    background-color: #003366;
+    color: white;
+    position: sticky; 
+    top: 0;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Table Cells Styling */
+.requests-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Status Styling */
+.pending {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Action Buttons (Approve/Reject) */
+.approve-btn, .reject-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.approve-btn {
+    background-color: #28a745; 
+    color: white;
+}
+
+.reject-btn {
+    background-color: #dc3545; 
+    color: white;
+}
+
+.approve-btn:hover, .reject-btn:hover {
+    opacity: 0.8;
+}
+
+/* Feedback Textarea */
+textarea.feedback {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    min-height: 60px;
+    resize: none;
+    background-color: #f4f4f4;
+}
+
+/* File link styling */
+.requests-table td a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.requests-table td a:hover {
+    color: #005f87;
+}

@@ -1,0 +1,112 @@
+/* General Layout */
+#handle-services {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+/* Table container */
+.table-container {
+    max-height: 500px; 
+    overflow-y: auto; 
+}
+
+/* Table Styles */
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: fixed;
+}
+
+.services-table th,
+.services-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+.services-table th {
+    background-color: #003366;
+    color: white;
+    position: sticky; 
+    top: 0; 
+    z-index: 1;
+}
+
+/* Status */
+.pending {
+    color: orange;
+    font-weight: bold;
+}
+
+.scheduled {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.completed {
+    color: green;
+    font-weight: bold;
+}
+
+/* Notes textarea */
+textarea.notes {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    min-height: 50px;
+    resize: none;
+    background-color: #f4f4f4;
+}
+
+/* Action buttons */
+.assign-btn, .complete-btn {
+    padding: 8px 16px;
+    margin: 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.assign-btn {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.complete-btn {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.assign-btn:hover, .complete-btn:hover {
+    opacity: 0.8;
+}
+
+/* Input date */
+input[type="date"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Scrollbar */
+.table-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #003366;
+    border-radius: 5px;
+}
