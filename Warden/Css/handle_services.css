@@ -1,30 +1,29 @@
-/* General Layout */
-#handle-services {
-    width: 100%;
+/* Container */
+#manage-services {
+    width: 95%;
     max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 20px auto;
     text-align: center;
 }
 
-h2 {
+#manage-services h2 {
     font-size: 28px;
     color: #003366;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* Table container */
+/* Table Container */
 .table-container {
-    max-height: 500px; 
-    overflow-y: auto; 
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
-/* Table Styles */
+/* Table */
 .services-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-    table-layout: fixed;
 }
 
 .services-table th,
@@ -32,81 +31,73 @@ h2 {
     padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
-    word-wrap: break-word;
+    vertical-align: middle;
+    box-sizing: border-box;
 }
 
+/* Table Header */
 .services-table th {
     background-color: #003366;
     color: white;
-    position: sticky; 
-    top: 0; 
-    z-index: 1;
-}
-
-/* Status */
-.pending {
-    color: orange;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    font-size: 16px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
-.scheduled {
-    color: #007bff;
-    font-weight: bold;
-}
-
-.completed {
-    color: green;
-    font-weight: bold;
-}
-
-/* Notes textarea */
-textarea.notes {
-    width: 100%;
+/* Inputs */
+.date-input,
+.status-select {
+    width: 90%;
     padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    min-height: 50px;
-    resize: none;
-    background-color: #f4f4f4;
-}
-
-/* Action buttons */
-.assign-btn, .complete-btn {
-    padding: 8px 16px;
-    margin: 3px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     font-size: 14px;
-}
-
-.assign-btn {
-    background-color: #28a745; /* Green */
-    color: white;
-}
-
-.complete-btn {
-    background-color: #007bff; /* Blue */
-    color: white;
-}
-
-.assign-btn:hover, .complete-btn:hover {
-    opacity: 0.8;
-}
-
-/* Input date */
-input[type="date"] {
-    padding: 5px;
-    border-radius: 5px;
     border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-/* Scrollbar */
+.feedback-textarea {
+    width: 95%;
+    min-height: 60px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+.submit-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    opacity: 0.85;
+}
+
+/* Scrollbar Styling */
 .table-container::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
 .table-container::-webkit-scrollbar-thumb {
-    background-color: #003366;
-    border-radius: 5px;
+    background: #888;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
