@@ -1,0 +1,96 @@
+/* General Layout for Track Attendance */
+#track-attendance {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* Month Selector */
+.month-selector {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.month-selector select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+}
+
+/* Student Count */
+.student-count {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Container for table */
+.table-container {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Table Styles */
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Table Header Styling */
+.attendance-table th {
+    background-color: #003366;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Status Styling */
+.active {
+    color: green;
+    font-weight: bold;
+}
+
+.inactive {
+    color: gray;
+    font-weight: bold;
+}
+
+/* Action Buttons Styling */
+.mark-inactive-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #003366;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.mark-inactive-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

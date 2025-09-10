@@ -36,13 +36,13 @@
             </div>
 
             <div class="card-row">
-                <a href="#" class="card-link">
+                <a href="post_notice.php" class="card-link">
                     <div class="card">
                         <h3>Post Notices</h3>
                         <p>Post important notices for the hostel.</p>
                     </div>
                 </a>
-                <a href="#" class="card-link">
+                <a href="track_attendance.php" class="card-link">
                     <div class="card">
                         <h3>Track Attendance</h3>
                         <p>Track and manage student attendance.</p>

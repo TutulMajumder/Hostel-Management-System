@@ -91,5 +91,9 @@ textarea.feedback {
 .submit-btn:hover {
     opacity: 0.8;
 }
+.pending { color: orange; }
+.resolved { color: green; }
+.escalated { color: red; }
+.dismissed { color: grey; }
 
 
