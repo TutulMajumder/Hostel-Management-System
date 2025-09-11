@@ -1,0 +1,109 @@
+-- ==========================
+-- Students Table
+-- ==========================
+CREATE TABLE students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(100) NOT NULL,
+    semester VARCHAR(10),
+    department VARCHAR(50),
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    status ENUM('Active','Inactive') DEFAULT 'Active',
+    date_joined TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- ==========================
+-- Rooms Table
+-- ==========================
+CREATE TABLE rooms (
+    room_id INT AUTO_INCREMENT PRIMARY KEY,
+    room_name VARCHAR(20) NOT NULL,        -- e.g., "A-101"
+    block VARCHAR(10) NOT NULL,
+    room_type ENUM('Single','Double','Shared') NOT NULL,
+    available INT DEFAULT 1,               -- 1 = Available, 0 = Occupied
+    assigned_student_id INT DEFAULT NULL,
+    FOREIGN KEY (assigned_student_id) REFERENCES students(student_id)
+);
+
+
+-- ==========================
+-- Room Applications Table
+-- ==========================
+CREATE TABLE room_applications (
+    application_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT NOT NULL,
+    semester VARCHAR(10),
+    department VARCHAR(50),
+    room_pref ENUM('Single','Double','Shared'),
+    hostel_block VARCHAR(10),
+    notes TEXT,
+    status ENUM('Pending','Assigned','Rejected') DEFAULT 'Pending',
+    date_applied TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+);
+
+
+-- ==========================
+-- Attendance Table
+-- ==========================
+CREATE TABLE attendance (
+    attendance_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT NOT NULL,
+    month CHAR(7) NOT NULL, -- Format: YYYY-MM
+    status ENUM('Active', 'Inactive') DEFAULT 'Active',
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+);
+
+
+-- ==========================
+-- Notices Table
+-- ==========================
+CREATE TABLE notices (
+    notice_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    note TEXT,
+    notice_path VARCHAR(255) DEFAULT NULL,
+    date_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE notice_recipients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    notice_id INT,
+    recipient ENUM('Student','Health Officer','Accountant') NOT NULL,
+    FOREIGN KEY (notice_id) REFERENCES notices(notice_id) ON DELETE CASCADE
+);
+
+
+
+-- ==========================
+-- Complaints Table
+-- ==========================
+CREATE TABLE complaints (
+    complaint_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT NOT NULL,
+    student_name VARCHAR(100),
+    category VARCHAR(50),
+    details TEXT,
+    status ENUM('Pending','Resolved','Escalated','Dismissed') DEFAULT 'Pending',
+    feedback TEXT DEFAULT NULL,
+    date_submitted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+);
+
+
+-- ==========================
+-- Services Table
+-- ==========================
+CREATE TABLE services (
+    service_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT NOT NULL,
+    student_name VARCHAR(100),
+    service_type VARCHAR(50),
+    preferred_date DATE NOT NULL,
+    assign_date DATE DEFAULT NULL,
+    status ENUM('Pending','Scheduled','Completed') DEFAULT 'Pending',
+    feedback TEXT DEFAULT NULL,
+    date_submitted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+);

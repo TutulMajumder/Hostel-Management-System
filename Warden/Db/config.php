@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "warden_management_system";
+$dbname = "wms";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 

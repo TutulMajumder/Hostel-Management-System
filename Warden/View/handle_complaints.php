@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Handle Complaints - Hostel Management System</title>
     <link rel="stylesheet" href="../Css/handle_complaints.css"> <!-- Link to the CSS -->
@@ -15,6 +15,28 @@
         <section id="handle-complaints">
             <h2>Handle Complaints</h2>
 
+            <!-- Form to handle complaint actions (above table) -->
+            <form action="" method="POST">
+                <label for="complaint_id">Complaint ID</label>
+                <input type="text" name="complaint_id" id="complaint_id" placeholder="Enter Complaint ID" class="complaint-id-input">
+
+                <label for="status">Status</label>
+                <select name="status" id="status" class="status-select">
+                    <option value="Pending" selected>Pending</option>
+                    <option value="Resolved">Resolved</option>
+                    <option value="Escalated">Escalated</option>
+                    <option value="Dismissed">Dismissed</option>
+                </select>
+
+                <label for="feedback">Feedback</label>
+                <textarea name="feedback" id="feedback" class="feedback-textarea" placeholder="Enter feedback..."></textarea>
+
+                <!-- <span class="error"><?php echo $errors; ?></span>
+                <span class="success"><?php echo $success; ?></span> -->
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
             <!-- Table to display complaints -->
             <div class="table-container">
                 <table class="complaints-table">
@@ -26,7 +48,7 @@
                             <th>Complaint Category</th>
                             <th>Complaint Details</th>
                             <th>Status</th>
-                            <th>Action</th>
+                            <th>Feedback</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,20 +60,7 @@
                             <td>Room Condition</td>
                             <td>Leaky faucet in the bathroom</td>
                             <td class="pending">Pending</td>
-                            <td>
-                                <form action="process_complaint.php" method="POST">
-                                    <input type="hidden" name="complaint_id" value="CMP001">
-                                    <input type="hidden" name="student_id" value="STU001">
-                                    <select name="action" class="action-select">
-                                        <option value="resolved">Resolved</option>
-                                        <option value="escalated">Escalated</option>
-                                        <option value="pending">Pending Investigation</option>
-                                        <option value="dismissed">Dismissed</option>
-                                    </select>
-                                    <textarea name="feedback" class="feedback" placeholder="Leave your feedback..."></textarea>
-                                    <button type="submit" name="submit" class="submit-btn">Submit</button>
-                                </form>
-                            </td>
+                            <td>None</td>
                         </tr>
 
                         <!-- Example Complaint 2 -->
@@ -62,20 +71,7 @@
                             <td>Food Quality</td>
                             <td>Food served is cold and tasteless</td>
                             <td class="pending">Pending</td>
-                            <td>
-                                <form action="process_complaint.php" method="POST">
-                                    <input type="hidden" name="complaint_id" value="CMP002">
-                                    <input type="hidden" name="student_id" value="STU002">
-                                    <select name="action" class="action-select">
-                                        <option value="resolved">Resolved</option>
-                                        <option value="escalated">Escalated</option>
-                                        <option value="pending">Pending Investigation</option>
-                                        <option value="dismissed">Dismissed</option>
-                                    </select>
-                                    <textarea name="feedback" class="feedback" placeholder="Leave your feedback..."></textarea>
-                                    <button type="submit" name="submit" class="submit-btn">Submit</button>
-                                </form>
-                            </td>
+                            <td>None</td>
                         </tr>
 
                         <!-- Add more complaints as needed -->

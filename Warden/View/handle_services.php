@@ -22,7 +22,7 @@ include "../Php/process_services.php";
 
             <form action="" method="POST">
                 <label>Service Id</label>
-                <input type="text" name="service_id" class="request_input">
+                <input type="text" name="service_id" placeholder="Enter Complaint ID" class="request_input">
                 <label>Assigned Date</label>
                 <input type="date" name="assign_date" class="date-input">
                 <label>Status</label>

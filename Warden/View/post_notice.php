@@ -1,7 +1,9 @@
+<?php
+include "../Php/process_notice.php";
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Notice - Hostel Management System</title>
     <link rel="stylesheet" href="../Css/topbar.css">
@@ -17,18 +19,18 @@
         <section id="post-notice">
             <h2>Post a Notice</h2>
 
-            <form action="process_notice.php" method="POST" enctype="multipart/form-data" class="notice-form">
+            <form action="" method="POST" enctype="multipart/form-data">
 
                 <!-- Notice Title -->
                 <label for="notice_title">Notice Title:</label>
                 <input type="text" id="notice_title" name="notice_title" placeholder="Enter Notice Title">
 
                 <!-- Recipients -->
-                <p><strong>Send Notice To:</strong></p>
+                <label for="notice_title">Send To:</label>
                 <div class="recipients">
-                    <label><input type="checkbox" name="recipients[]" value="students"> Students</label>
-                    <label><input type="checkbox" name="recipients[]" value="accountant"> Accountant</label>
-                    <label><input type="checkbox" name="recipients[]" value="health_officer"> Health Officer</label>
+                    <label><input type="checkbox" name="recipients[]" value="Student"> Students</label>
+                    <label><input type="checkbox" name="recipients[]" value="Accountant"> Accountants</label>
+                    <label><input type="checkbox" name="recipients[]" value="Health Officer"> Health Officers</label>
                 </div>
 
                 <!-- Upload Notice File -->
@@ -38,7 +40,8 @@
                 <!-- Additional Information -->
                 <label for="note">Additional Information:</label>
                 <textarea id="note" name="note" placeholder="Add any extra details here"></textarea>
-
+                <span class="error"><?php echo $errors; ?></span>
+                <span class="success"><?php echo $success; ?></span>
                 <!-- Submit Button -->
                 <button type="submit" name="submit" class="submit-btn">Post Notice</button>
 
