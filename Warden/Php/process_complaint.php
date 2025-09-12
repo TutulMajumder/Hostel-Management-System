@@ -5,6 +5,7 @@ include "../Db/config.php";
 // Fetch all complaints always
 $query = "SELECT * FROM complaints";
 $result = $conn->query($query);
+$complaints = [];
 if ($result && $result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $complaints[] = $row;
@@ -73,7 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     // }
 
                     // Fetch all services from database
-                    $complaints = [];
                     $query = "SELECT * FROM complaints";
                     $result = $conn->query($query);
                     if ($result && $result->num_rows > 0) {

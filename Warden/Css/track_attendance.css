@@ -4,7 +4,7 @@
     max-width: 1300px;
     margin-bottom: 20px;
     margin-top: 0px;
-    padding: 20px;
+    /* padding: 20px; */
     background-color: #fafafa;
     border-radius: 10px;
     text-align: center;
@@ -53,14 +53,6 @@ input[type="date"] {
     box-sizing: border-box;
 }
 
-
-.student-count {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
-
-    font-weight: 600;
-}
 
 /* Attendance Entry Form */
 form {
