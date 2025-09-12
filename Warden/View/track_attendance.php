@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <title>Track Attendance - Hostel Management System</title>
-    <link rel="stylesheet" href="../Css/topbar.css">
     <link rel="stylesheet" href="../Css/track_attendance.css">
+    <link rel="stylesheet" href="../Css/topbar.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -14,24 +16,31 @@
     <main>
         <section id="track-attendance">
             <h2>Track Attendance</h2>
-
-            <!-- Month Selector -->
-            <div class="month-selector">
-                <label for="month">Select Month:</label>
-                <select name="month" id="month">
-                    <option value="2025-09">September 2025</option>
-                    <option value="2025-08">August 2025</option>
-                    <option value="2025-07">July 2025</option>
-                    <!-- Add more months as needed -->
-                </select>
-            </div>
-
-            <!-- Student Count -->
             <div class="student-count">
-                Total Active Students for September 2025: <span class="count">25</span>
+                Total Active Students for Selected Date: <span class="count">25</span>
             </div>
 
-            <!-- Table to display attendance -->
+            <!-- Attendance Entry Form -->
+            <form action="" method="POST">
+                <label for="attendance_date">Select Date:</label>
+                <input type="date" id="attendance_date" name="attendance_date" value="<?php echo date('Y-m-d'); ?>" class="date-input">
+
+                <label for="student_id">Student ID:</label>
+                <input type="text" name="student_id" id="student_id" placeholder="Enter Student ID" class="request_input">
+
+                <label for="attendance_status">Status:</label>
+                <select name="status" id="attendance_status" class="status-select">
+                    <option value="present">Present</option>
+                    <option value="absent">Absent</option>
+                </select>
+
+                <!-- <span class="error"><?php echo $errors; ?></span>
+                <span class="success"><?php echo $success; ?></span> -->
+
+                <button type="submit" class="submit-btn">Submit Attendance</button>
+            </form>
+
+            <!-- Attendance Table -->
             <div class="table-container">
                 <table class="attendance-table">
                     <thead>
@@ -39,37 +48,30 @@
                             <th>Student ID</th>
                             <th>Name</th>
                             <th>Room No</th>
-                            <th>Check-in Date</th>
                             <th>Status</th>
-                            <th>Action</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <!-- Example Active Student -->
-                        <tr>
-                            <td>STU001</td>
-                            <td>John Doe</td>
-                            <td>101</td>
-                            <td>01-09-2025</td>
-                            <td class="active">Active</td>
-                            <td>
-                                <button class="mark-inactive-btn">Mark Inactive</button>
-                            </td>
-                        </tr>
-
-                        <!-- Example Inactive Student -->
-                        <tr>
-                            <td>STU002</td>
-                            <td>Jane Smith</td>
-                            <td>102</td>
-                            <td>01-08-2025</td>
-                            <td class="inactive">Inactive</td>
-                            <td>
-                                <button class="mark-inactive-btn" >Mark Inactive</button>
-                            </td>
-                        </tr>
-
-                        <!-- Add more students as needed -->
+                    <tbody id="attendance-table-body">
+                        <!-- <?php
+                                // // Fetch attendance data from the database
+                                // $query = "SELECT * FROM attendance";
+                                // $result = $conn->query($query);
+                                // if ($result->num_rows > 0) {
+                                //     while ($row = $result->fetch_assoc()) {
+                                //         echo "<tr>";
+                                //         echo "<td>" . $row['student_id'] . "</td>";
+                                //         echo "<td>" . $row['fullname'] . "</td>";
+                                //         echo "<td>" . $row['room_no'] . "</td>";
+                                //         echo "<td>" . $row['status'] . "</td>";
+                                //         echo "<td>" . $row['date'] . "</td>";
+                                //         echo "</tr>";
+                                //     }
+                                // } else {
+                                //     // If no records are found, display this message
+                                //     echo "<tr><td colspan='5'>No attendance records found.</td></tr>";
+                                // }
+                                ?> -->
                     </tbody>
                 </table>
             </div>
@@ -80,4 +82,5 @@
     <?php include "footer.php"; ?>
 
 </body>
+
 </html>

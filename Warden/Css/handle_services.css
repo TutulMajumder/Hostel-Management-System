@@ -1,5 +1,4 @@
-/* General Layout for Handle Complaints */
-#handle-complaints {
+#manage-services {
     width: 95%;
     max-width: 1400px;
     margin: 20px auto;
@@ -7,37 +6,39 @@
     font-family: Arial, sans-serif;
 }
 
-#handle-complaints h2 {
+#manage-services h2 {
     font-size: 28px;
     color: #003366;
     margin-bottom: 20px;
     font-weight: 600;
 }
 
-/* Form Styling (Above the Table) */
-#handle-complaints form {
-    width: 400px;
-    margin: 30px auto;
+form {
+    width: 400px; 
+    margin: 30px auto; 
     padding: 25px 20px;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; 
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 10px;
+    font-family: Arial, sans-serif;
 }
 
-#handle-complaints form label {
+
+form label {
     font-weight: bold;
     color: #003366;
     font-size: 14px;
     text-align: left;
 }
 
-#handle-complaints form input,
-#handle-complaints form select,
-#handle-complaints form textarea {
-    width: 100%;
+
+form input,
+form select,
+form textarea {
+    width: 100%; 
     padding: 8px 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -50,6 +51,7 @@
     min-height: 60px;
     resize: none;
 }
+
 
 .submit-btn {
     padding: 10px 0;
@@ -65,7 +67,6 @@
     background-color: #0055aa;
 }
 
-/* Table Styling */
 .table-container {
     max-height: 500px;
     overflow-y: auto;
@@ -75,15 +76,15 @@
     margin-bottom: 30px;
 }
 
-.complaints-table {
+.services-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
     min-width: 900px;
 }
 
-.complaints-table th,
-.complaints-table td {
+.services-table th,
+.services-table td {
     padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
@@ -91,7 +92,8 @@
     box-sizing: border-box;
 }
 
-.complaints-table th {
+
+.services-table th {
     background-color: #003366;
     color: white;
     position: sticky;
@@ -102,35 +104,35 @@
     text-transform: uppercase;
 }
 
-.complaints-table tbody tr:nth-child(even) {
+
+.services-table tbody tr:nth-child(even) {
     background-color: #f5f5f5;
 }
 
-.status-pending {
+
+
+
+/* .status-pending {
     color: orange;
     font-weight: bold;
 }
-
-.status-resolved {
-    color: green;
-}
-
-.status-escalated {
+.status-scheduled {
     color: blue;
+    font-weight: bold;
 }
+.status-completed {
+    color: green;
+    font-weight: bold;
+} */
 
-.status-dismissed {
-    color: grey;
-}
-
-/* Error and Success Styling */
 .error {
-    color: red;
-    font-size: 13px;
+  color: red;
+  font-size: 13px;
 }
 
 .success {
-    color: green;
-    margin-top: 15px;
-    font-size: 15px;
+  color: green;
+  margin-top: 15px;
+  font-size: 15px;
 }
+

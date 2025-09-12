@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "wms";
+$dbname = "hostel_management_system";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 

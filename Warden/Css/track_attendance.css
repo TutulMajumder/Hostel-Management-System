@@ -1,96 +1,161 @@
 /* General Layout for Track Attendance */
 #track-attendance {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 1300px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
     text-align: center;
 }
 
-h2 {
-    font-size: 28px;
+/* Heading */
+#track-attendance h2 {
+    font-size: 30px;
     color: #003366;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
-/* Month Selector */
-.month-selector {
+/* Selection Container (Month and Date) */
+.selection-container {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 15px;
-    font-size: 16px;
+    flex-wrap: wrap;
 }
 
-.month-selector select {
-    padding: 8px 12px;
+.month-selector,
+.date-picker {
+    margin-bottom: 0;
+    min-width: 200px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.month-selector label,
+.date-picker label {
     font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+select,
+input[type="date"] {
+    padding: 10px;
+    font-size: 14px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    background-color: #f4f4f4;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Student Count */
+
 .student-count {
     font-size: 18px;
-    margin-bottom: 15px;
+    color: #333;
+    margin-bottom: 20px;
+
+    font-weight: 600;
+}
+
+/* Attendance Entry Form */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    align-items: flex-start;
+}
+
+form label {
+    font-weight: 600;
     color: #003366;
-    font-weight: bold;
+    font-size: 15px;
 }
 
-/* Container for table */
+form input,
+form select {
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 12px;
+    background-color: #003366;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #0055aa;
+}
+
+/* Table Container */
 .table-container {
-    max-height: 500px;
+    max-height: 400px;
     overflow-y: auto;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    margin-top: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Table Styles */
+/* Table Styling */
 .attendance-table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 15px;
+    background-color: #f9f9f9;
 }
 
 .attendance-table th,
 .attendance-table td {
-    padding: 15px;
+    padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
-    box-sizing: border-box;
 }
 
 /* Table Header Styling */
 .attendance-table th {
     background-color: #003366;
     color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 700;
 }
 
-/* Status Styling */
-.active {
-    color: green;
-    font-weight: bold;
+/* Table Body Styling */
+.attendance-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-.inactive {
-    color: gray;
-    font-weight: bold;
-}
-
-/* Action Buttons Styling */
-.mark-inactive-btn {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #003366;
-    color: white;
+/* Error and Success Messages */
+.error {
+    color: red;
     font-size: 14px;
-    cursor: pointer;
 }
 
-.mark-inactive-btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+.success {
+    color: green;
+    font-size: 15px;
+    font-weight: 600;
 }

@@ -27,7 +27,7 @@
                         <p>View and manage leave requests.</p>
                     </div>
                 </a>
-                <a href="handle_complaints.php" class="card-link">
+                <a href="handle_complaint.php" class="card-link">
                     <div class="card">
                         <h3>Handle Complaints</h3>
                         <p>View and handle student complaints.</p>

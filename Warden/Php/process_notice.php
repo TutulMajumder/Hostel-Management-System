@@ -46,14 +46,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Directory setup for uploads
             $upload_dir = "../uploads/notices/";
             if (!is_dir($upload_dir)) {
-                mkdir($upload_dir, 0777, true); // Create directory if it doesn't exist
+                mkdir($upload_dir, 0777, true); 
             }
 
             $new_name = uniqid("notice_", true) . "." . $ext;
             $target = $upload_dir . $new_name;
 
             if (move_uploaded_file($notice_file['tmp_name'], $target)) {
-                $notice_path = $target;  // Set the file path if upload is successful
+                $notice_path = $target;  
             } else {
                 $errors .= "Failed to save uploaded file. ";
             }
