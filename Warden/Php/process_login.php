@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // User roles and redirections
     $user_tables = [
         'students' => 'Student/View/dashboard.php',
-        'wardens' => 'warden/View/warden_dashboard.php',
+        'wardens' => 'Warden/View/warden_dashboard.php',
         'health_officers' => 'View/health_dashboard.php',
-        'accountants' => 'View/account_dashboard.php'
+        'accountants' => 'Account/View/dashboard.php'
     ];
 
     $roles = [
