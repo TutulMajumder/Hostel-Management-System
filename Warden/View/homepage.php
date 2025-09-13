@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hostel Management System</title>
     <link rel="stylesheet" href="../Css/homepage.css">
 </head>
@@ -13,8 +11,8 @@
         <div class="header-actions">
             <a href="#" class="nav-link">About</a>
             <a href="#" class="nav-link">Contact</a>
-            <a href="#" class="nav-link">Register</a>
-            <a href="#" class="nav-link">Login</a>
+            <a href="../../Student/View/register_form.php" class="nav-link">Register</a>
+            <a href="login.php" class="nav-link">Login</a>
         </div>
     </header>
 
@@ -35,13 +33,13 @@
                 <div class="info-box">
                     <h3>For Students</h3>
                     <p>Students can easily register, apply for rooms, and track their application status. They can also submit complaints and request services.</p>
-                    <a href="#" class="info-link">Register Now</a>
+                    <a href="../../Student/View/register_form.php" class="info-link">Register Now</a>
                 </div>
             </div>
             <!-- Getting Started -->
             <div class="getting-started">
                 <h3>Get Started with Hostel Management</h3>
-                <p>If you're a new user, <a href="#">register now</a> to get started with managing your hostel services. Already have an account? <a href="#">Login</a></p>
+                <p>If you're a new user, <a href="../../Student/View/register_form.php">register now</a> to get started with managing your hostel services. Already have an account? <a href="login.php">Login</a></p>
             </div>
         </section>
     </main>

@@ -79,23 +79,27 @@ include '../Php/process_complaint.php';
                                 //     echo "<tr><td colspan='7'>So Complaints found.</td></tr>";
                                 // }
                                 ?> -->
-                        <?php if (!empty($complaints)): ?>
-                            <?php foreach ($complaints as $complaint): ?>
-                                <tr>
-                                    <td><?= $complaint['id'] ?></td>
-                                    <td><?= $complaint['student_id'] ?></td>
-                                    <td><?= $complaint['fullname'] ?></td>
-                                    <td><?= $complaint['category'] ?></td>
-                                    <td><?= $complaint['details'] ?></td>
-                                    <td><?= $complaint['status'] ?></td>
-                                    <td><?= $complaint['feedback'] ?></td>
-                                </tr>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <tr>
-                                <td colspan="7" style="text-align:center;">No complaints found</td>
-                            </tr>
-                        <?php endif; ?>
+                        <?php
+                        // Fetch attendance data from the database
+                        $query = "SELECT * FROM complaints";
+                        $result = $conn->query($query);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo " <td>" . $complaint['id'] . "</td>";
+                                echo " <td>" . $complaint['student_id'] . "</td>";
+                                echo " <td>" . $complaint['fullname'] . "</td>";
+                                echo "  <td>" . $complaint['category'] . "</td>";
+                                echo "  <td>" . $complaint['details'] . "</td>";
+                                echo "  <td>" . $complaint['status'] . "</td>";
+                                echo "  <td>" . $complaint['feedback'] . "</td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='7'>No Complaints records found.</td></tr>";
+                        }
+                        ?>
+
                     </tbody>
                 </table>
             </div>

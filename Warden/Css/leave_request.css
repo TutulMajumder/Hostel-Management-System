@@ -1,102 +1,124 @@
-/* General Layout for Leave Requests Table */
+/* General Layout for Leave Requests */
 #leave-requests {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20 auto;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-h2 {
+#leave-requests h2 {
     font-size: 28px;
     color: #003366;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-/* Container for the table */
+/* Container for the form */
+form {
+    width: 400px;
+    margin: 30px auto;
+    padding: 25px 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+    color: #003366;
+    font-size: 14px;
+    text-align: left;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.feedback-textarea {
+    min-height: 60px;
+    resize: none;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0055aa;
+}
+
+/* Table Container */
 .table-container {
-    max-height: 400px;  
-    overflow-y: auto;   
-    border: 1px solid #ddd;
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 50px;
 }
 
-/* Table Styles */
+/* Table Styling */
 .requests-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-}
+    font-size: 14px;
+    min-width: 900px;
 
-/* Table Header Styling */
-.requests-table th {
-    background-color: #003366;
-    color: white;
-    position: sticky; 
-    top: 0;
-    z-index: 1;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 15px;
-    text-align: center;
 }
 
 /* Table Cells Styling */
+.requests-table th,
 .requests-table td {
-    padding: 15px;
+    padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
+    vertical-align: middle;
+    box-sizing: border-box;
 }
 
-/* Status Styling */
-.pending {
-    color: orange;
-    font-weight: bold;
-}
-
-/* Action Buttons (Approve/Reject) */
-.approve-btn, .reject-btn {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.approve-btn {
-    background-color: #28a745; 
+.requests-table th {
+    background-color: #003366;
     color: white;
-}
-
-.reject-btn {
-    background-color: #dc3545; 
-    color: white;
-}
-
-.approve-btn:hover, .reject-btn:hover {
-    opacity: 0.8;
-}
-
-/* Feedback Textarea */
-textarea.feedback {
-    width: 80%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 2;
     font-size: 16px;
-    min-height: 60px;
-    resize: none;
-    background-color: #f4f4f4;
-}
-
-/* File link styling */
-.requests-table td a {
-    color: #003366;
-    text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
-.requests-table td a:hover {
-    color: #005f87;
+.requests-table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+
+
+.error {
+    color: red;
+    font-size: 13px;
+}
+
+.success {
+    color: green;
+    margin-top: 15px;
+    font-size: 15px;
 }
